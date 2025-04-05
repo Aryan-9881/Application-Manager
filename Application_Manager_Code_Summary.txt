@@ -1,0 +1,72 @@
+
+📝 Application Manager (PyQt5 GUI App) – Code Summary
+
+---
+
+🔧 Modules Used
+- PyQt5.QtWidgets
+  - QApplication, QMainWindow, QPushButton, QVBoxLayout, QWidget, QLabel
+  → Used for creating the GUI window, layout, buttons, and labels.
+
+- PyQt5.QtGui
+  - QFont, QIcon
+  → Used to set font style and app icon.
+
+- PyQt5.QtCore
+  - Qt
+  → Used for text alignment and layout behavior.
+
+- sys
+  → Handles application arguments and exit behavior.
+
+- subprocess
+  → Launches external applications or websites.
+
+---
+
+🎨 User Interface Features
+- Window Title: "Application Manager"
+- Window Size: 600 x 500
+- Window Icon: Custom image (Captain_America_Shield.webp)
+- Background Color: Dark navy blue (#1e1e2f)
+- Text Color: White
+- Label Title: "Welcome to Your Application Manager"
+  - Font: Arial, 18pt, Bold
+  - Color: Pink (#ff79c6)
+  - Center-aligned
+
+---
+
+🔘 Buttons & Their Functions
+| Button Text        | Action Triggered                                |
+|--------------------|--------------------------------------------------|
+| Open VS Code       | Launches Visual Studio Code                     |
+| Open YouTube       | Opens YouTube in Chrome browser                 |
+| Open ChatGPT       | Opens ChatGPT in Chrome browser                 |
+| Open All           | Opens all the above together                    |
+
+- Button Style:
+  - Background: #6272a4 (purple)
+  - Hover Background: #7085d8
+  - Text Color: White
+  - Rounded Corners (10px)
+  - Padding: 12px
+
+---
+
+🖥️ Custom Methods Defined
+- open_vscode(): Launches VS Code using full path.
+- open_youtube(): Opens YouTube in browser.
+- open_chatgpt(): Opens ChatGPT in browser.
+- open_all(): Calls all three methods to open everything at once.
+
+---
+
+🚀 Main Execution
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec())
+
+→ Standard way to start a PyQt5 app.
